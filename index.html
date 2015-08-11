@@ -113,38 +113,13 @@
 
 	<section id="hero">
 		<ul data-orbit data-options="timer:false; slide_number:false; bullets:false;">
-			<li class="active">
-				<img data-interchange="[/img/1770-layer-34.jpg, (default))],
-					[/img/640-layer-34.jpg, (small)],
-					[/img/320-layer-34.jpg, (only screen and (max-width: 320px))],
-					[/img/1024-layer-34.jpg, (medium)],
-					[/img/1200-layer-34.jpg, (large)],
-					[/img/1770-layer-34.jpg, (only screen and (min-width: 1201px))]"  alt="slide 1" />
+			<li id="img-layer-34" class="active">
+				<img src="/img/320-layer-34.jpg"  alt="slide 1" />
 			</li>
-			<li>
-				<img data-interchange="[/img/1770-layer-33.jpg, (default))],
-					[/img/640-layer-33.jpg, (small)],
-					[/img/320-layer-33.jpg, (only screen and (max-width: 320px))],
-					[/img/1024-layer-33.jpg, (medium)],
-					[/img/1200-layer-33.jpg, (large)],
-					[/img/1770-layer-33.jpg, (only screen and (min-width: 1201px))]"  alt="slide 2" />
-			</li>
-			<li>
-				<img data-interchange="[/img/1770-layer-31.jpg, (default))],
-					[/img/640-layer-31.jpg, (small)],
-					[/img/320-layer-31.jpg, (only screen and (max-width: 320px))],
-					[/img/1024-layer-31.jpg, (medium)],
-					[/img/1200-layer-31.jpg, (large)],
-					[/img/1770-layer-31.jpg, (only screen and (min-width: 1201px))]"  alt="slide 3" />
-			</li>
-			<li>
-				<img data-interchange="[/img/1770-ct.jpg, (default))],
-					[/img/640-ct.jpg, (small)],
-					[/img/320-ct.jpg, (only screen and (max-width: 320px))],
-					[/img/1024-ct.jpg, (medium)],
-					[/img/1200-ct.jpg, (large)],
-					[/img/1770-ct.jpg, (only screen and (min-width: 1201px))]"  alt="slide 4" />
-			</li>
+			<!-- images loaded by JS after $(document).ready()-->
+			<li id="img-layer-33"></li>
+			<li id="img-layer-31"></li>
+			<li id="img-ct"></li>
 		</ul>
 
 		<article>
@@ -401,6 +376,7 @@
 		</div>
 	</footer>
 
-<script defer src="/js/main.min.js"></script>
+	<script defer src="/js/main.min.js"></script>
+	<!--<script defer src="/js/app.js"></script>-->
 </body>
 </html>
