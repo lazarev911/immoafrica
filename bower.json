@@ -1,0 +1,24 @@
+{
+  "name": "lazarev",
+  "version": "0.0.1",
+  "description": "lazarev",
+  "main": "main.js",
+  "license": "MIT",
+  "homepage": "lazarev.org.ua",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "authors": [
+    "Andrey Lazarev"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2",
+    "jquery": "~2.1.4",
+    "fontawesome": "~4.4.0"
+  }
+}

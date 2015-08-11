@@ -1,0 +1,51 @@
+AddDefaultCharset	UTF-8
+AddType             application/x-httpd-php .php .htm .html .phtml
+RemoveHandler       .html .htm .php
+
+#Защищаем .htaccess файл
+<files .htaccess="">
+	order allow,deny
+	deny from all
+</files>
+
+#Защищаем папку svn
+RedirectMatch 404 /\\.svn(/|$)
+
+#Усиливаем кеширование
+FileETag MTime Size
+<ifmodule mod_expires.c>
+	<filesmatch ".(jpg|gif|png|css|js)$">
+		ExpiresActive   on
+		ExpiresDefault  "access plus 1 year"
+	</filesmatch>
+</ifmodule>
+
+ServerSignature		EMail
+SetEnv				SERVER_ADMIN	admin@nardyclub.com
+
+RewriteEngine		on
+Options				-Indexes
+Options				+FollowSymlinks
+
+ErrorDocument		400    /error/400.html
+ErrorDocument		401    /error/401.html
+ErrorDocument		403    /error/403.html
+ErrorDocument		404    /error/404.html
+ErrorDocument		405    /error/405.html
+ErrorDocument		500    /error/500.html
+ErrorDocument		503    /error/503.html
+
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+RewriteBase			/
+RewriteRule			^error/ie5\.php$ - [L]
+RewriteRule			^error/ie6\.php$ - [L]
+RewriteRule			^error/ie7\.php$ - [L]
+
+
+RewriteCond         %{REQUEST_FILENAME} !-f
+
+
+RewriteCond         %{REQUEST_URI} !(.*)/$
+RewriteRule         ^(.*)$          $1/                     [L,R=301]
