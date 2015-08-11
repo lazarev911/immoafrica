@@ -10,6 +10,8 @@
 
 $(document).ready(function() {
 
+	$(document).foundation();
+
 	var images      =   [
 		{id: "img-layer-34", name: "layer-34.jpg", alt: "slide 1"},
 		{id: "img-layer-33", name: "layer-33.jpg", alt: "slide 2"},
@@ -40,8 +42,6 @@ $(document).ready(function() {
 		var s = document.getElementsByTagName('script')[0];
 		s.parentNode.insertBefore(wf, s);
 	})();
-
-	$(document).foundation();
 });
 
 function loadImages(images, dir) {
@@ -75,7 +75,3 @@ function loadImages(images, dir) {
 		$(id).attr('src', dir + '/' + prefix + this.name);
 	});
 }
-
-
-
-/**/
