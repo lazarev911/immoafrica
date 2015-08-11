@@ -48,14 +48,14 @@
 	<link rel="apple-touch-icon" href="/img/apple-touch-icon-57x57.png" sizes="57x57">
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/Organization">
 
 	<header class="header-bar">
 		<div class="top-bar row" data-topbar role="navigation">
 			<ul class="title-area">
 				<li class="name">
-					<h1 itemscope itemtype="http://schema.org/Organization" class="logo">
-						<a href=""><img src="/img/logo.png" title="immoafrica" alt="immoafrica" /></a>
+					<h1 class="logo">
+						<a href=""><img src="/img/logo.png" itemprop="image" title="immoafrica" alt="immoafrica" /></a>
 					</h1>
 				</li>
 				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -116,10 +116,7 @@
 			<li class="active">
 				<img id="img-layer-34" src="/img/320-layer-34.jpg"  alt="slide 1" />
 			</li>
-			<!-- images loaded by JS after $(document).ready()
-			<li id="img-layer-33"></li>
-			<li id="img-layer-31"></li>
-			<li id="img-ct"></li>-->
+			<!-- images loaded by JS after $(document).ready() -->
 		</ul>
 
 		<article>
@@ -344,7 +341,7 @@
 
 		<div class="row container">
 			<div id="copyright" class="text-center width-100">
-				<span class="sub-item">© ImmoAfrica.net 2010-2015.</span>
+				<span class="sub-item">© <span itemprop="name">ImmoAfrica</span>.net 2010-2015.</span>
 				<span class="sub-item">All Rights Reserved.</span>
 				<span class="sub-item">Connect & Engage.</span>
 				<span id="social-footer" class="visible-for-large-up">
