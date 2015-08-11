@@ -10,6 +10,8 @@
 
 $(document).ready(function() {
 
+	$(document).foundation();
+
 	var images      =   [
 		{id: "img-layer-34", name: "layer-34.jpg", alt: "slide 1"},
 		{id: "img-layer-33", name: "layer-33.jpg", alt: "slide 2"},
@@ -21,7 +23,25 @@ $(document).ready(function() {
 		loadImages(images, '/img');
 	});
 
-	$(document).foundation();
+	WebFontConfig = {
+		google: {
+			families: ['Roboto:300,400,700:latin']
+		},
+		custom: {
+			families: ['FontAwesome'],
+			urls: ['//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css']
+		}
+	};
+
+	(function () {
+		var wf = document.createElement('script');
+		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		wf.type = 'text/javascript';
+		wf.async = 'true';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wf, s);
+	})();
 });
 
 function loadImages(images, dir) {
@@ -55,25 +75,3 @@ function loadImages(images, dir) {
 		$(id).attr('src', dir + '/' + prefix + this.name);
 	});
 }
-
-
-
-/*WebFontConfig = {
- google: {
- families: ['Roboto:300,400,700:latin']
- },
- custom: {
- families: ['FontAwesome'],
- urls: ['//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css']
- }
- };
-
- (function () {
- var wf = document.createElement('script');
- wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
- '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
- wf.type = 'text/javascript';
- wf.async = 'true';
- var s = document.getElementsByTagName('script')[0];
- s.parentNode.insertBefore(wf, s);
- })();*/
