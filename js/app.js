@@ -40,13 +40,19 @@ function loadImages(images, dir) {
 	}
 
 	$.each(images, function() {
-		var div =   $('#' + this.id);
+		var id  =   '#' + this.id;
 
-		if (!(div).find('img').length) {
-			div.append('<img>').find('img').attr('alt', this.alt);
+		if (!$(id).length) {
+			$('#orbit-images')
+				.append('<li>')
+				.find('li:last')
+				.append('<img>')
+				.find('img')
+				.attr('alt', this.alt)
+				.attr('id', this.id);
 		}
 
-		div.find('img').attr('src', dir + '/' + prefix + this.name);
+		$(id).attr('src', dir + '/' + prefix + this.name);
 	});
 }
 
