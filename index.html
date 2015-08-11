@@ -67,7 +67,7 @@
 						<li><a href="#">For Pros</a></li>
 						<li><a href="#">Sign in</a></li>
 					</ul>
-					<span id="social-header">
+					<span id="social-header" class="visible-for-large-up">
 						<a href="#" target="_blank" title="Twitter">
 							<span class="fa-stack">
 			                    <i class="fa fa-circle fa-stack-2x background"></i>
@@ -114,16 +114,36 @@
 	<section id="hero">
 		<ul data-orbit data-options="timer:false; slide_number:false; bullets:false;">
 			<li class="active">
-				<img src="/img/320-layer-34.jpg" alt="slide 1" />
+				<img data-interchange="[/img/1770-layer-34.jpg, (default))],
+					[/img/640-layer-34.jpg, (small)],
+					[/img/320-layer-34.jpg, (only screen and (max-width: 320px))],
+					[/img/1024-layer-34.jpg, (medium)],
+					[/img/1200-layer-34.jpg, (large)],
+					[/img/1770-layer-34.jpg, (only screen and (min-width: 1201px))]"  alt="slide 1" />
 			</li>
 			<li>
-				<img src="/img/320-layer-33.jpg" alt="slide 2" />
+				<img data-interchange="[/img/1770-layer-33.jpg, (default))],
+					[/img/640-layer-33.jpg, (small)],
+					[/img/320-layer-33.jpg, (only screen and (max-width: 320px))],
+					[/img/1024-layer-33.jpg, (medium)],
+					[/img/1200-layer-33.jpg, (large)],
+					[/img/1770-layer-33.jpg, (only screen and (min-width: 1201px))]"  alt="slide 2" />
 			</li>
 			<li>
-				<img src="/img/320-layer-31.jpg" alt="slide 3" />
+				<img data-interchange="[/img/1770-layer-31.jpg, (default))],
+					[/img/640-layer-31.jpg, (small)],
+					[/img/320-layer-31.jpg, (only screen and (max-width: 320px))],
+					[/img/1024-layer-31.jpg, (medium)],
+					[/img/1200-layer-31.jpg, (large)],
+					[/img/1770-layer-31.jpg, (only screen and (min-width: 1201px))]"  alt="slide 3" />
 			</li>
 			<li>
-				<img src="/img/320-ct.jpg" alt="slide 4" />
+				<img data-interchange="[/img/1770-ct.jpg, (default))],
+					[/img/640-ct.jpg, (small)],
+					[/img/320-ct.jpg, (only screen and (max-width: 320px))],
+					[/img/1024-ct.jpg, (medium)],
+					[/img/1200-ct.jpg, (large)],
+					[/img/1770-ct.jpg, (only screen and (min-width: 1201px))]"  alt="slide 4" />
 			</li>
 		</ul>
 
@@ -145,7 +165,7 @@
 									<span>To Rent</span>
 								</a>
 							</li>
-							<li>
+							<li class="hide-for-small-only">
 								<a href="#">
 									<img src="img/up.png" class="up" />
 									<span>Holiday Rentals</span>
@@ -163,7 +183,8 @@
 										<input type="text" placeholder="Search by City or Suburb, e.g. Cape Town, Camps Bay...">
 									</div>
 									<div class="small-3 columns">
-										<a href="#" class="button postfix success">Search</a>
+										<a href="#" class="button postfix success hidden-for-medium-up">Go</a>
+										<a href="#" class="button postfix success visible-for-medium-up">Search</a>
 									</div>
 								</div>
 							</div>
@@ -186,7 +207,7 @@
 					<p>To do... <a href="#">Links Start your search here | Professionals - list your properties</a></p>
 				</article>
 				<hr class="separator" />
-				<article>
+				<article id="news">
 					<header class="block-main-header">
 						<h2>Relevant Resources</h2>
 						<span class="block-main-subheader">Ideas, inspiration, news and more.</span>
@@ -233,6 +254,8 @@
 					<a href="#" id="visit-resource" class="button round success">Visit Resource Centre</a>
 				</article>
 
+				<hr class="separator hidden-for-medium-up" />
+
 
 			</div>
 			<div class="large-6 columns" data-equalizer-watch>
@@ -242,7 +265,7 @@
 						<span class="block-main-subheader">Your search starts here.</span>
 					</header>
 					<div class="row">
-						<div class="large-4 columns">
+						<div class="medium-4 columns">
 							<ul class="no-bullet">
 								<li><a href="#">Western Cape (15016)</a></li>
 								<li><a href="#">Cape Town</a></li>
@@ -260,8 +283,8 @@
 								<li><a href="#">Ballito</a></li>
 							</ul>
 						</div>
-						<div class="large-8 columns">
-							<a class="th" href="/img/map-copy.png">
+						<div class="medium-8 columns">
+							<a class="th width-100" href="/img/map-copy.png">
 								<img src="/img/map-copy.png" class="width-100" alt="map-copy" title="map-copy">
 							</a>
 						</div>
@@ -284,7 +307,8 @@
 									<input type="text" placeholder="Enter your email address">
 								</div>
 								<div class="small-3 columns">
-									<a href="#" class="button postfix success round">Subscribe Me!</a>
+									<a href="#" class="button postfix success round hidden-for-medium-up">Go</a>
+									<a href="#" class="button postfix success round visible-for-medium-up">Subscribe Me!</a>
 								</div>
 							</div>
 						</div>
@@ -348,7 +372,7 @@
 				<span class="sub-item">© ImmoAfrica.net 2010-2015.</span>
 				<span class="sub-item">All Rights Reserved.</span>
 				<span class="sub-item">Connect & Engage.</span>
-				<span id="social-footer">
+				<span id="social-footer" class="visible-for-large-up">
 					<a href="#" target="_blank" title="Facebook">
 						<span class="fa-stack">
 		                    <i class="fa fa-circle fa-stack-2x background"></i>

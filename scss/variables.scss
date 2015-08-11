@@ -158,7 +158,7 @@ $global-rounded: 5px;
 
 // $small-breakpoint:  em-calc(640);
 // $medium-breakpoint: em-calc(1024);
-// $large-breakpoint:  em-calc(1440);
+$large-breakpoint:  em-calc(1200);
 // $xlarge-breakpoint: em-calc(1920);
 
 // $small-range:   (0, $small-breakpoint);
@@ -227,7 +227,7 @@ $header-font-family: 'Helvetica Neue';
 // We use these to control header font sizes
 // $h1-font-size: rem-calc(44);
 $h2-font-size:      rem-calc(30);
-$h3-font-size:      rem-calc(14);
+//$h3-font-size:      rem-calc(14);
 //$h4-font-size:      rem-calc(14);
 //$h5-font-size:      rem-calc(12);
 // $h6-font-size: 1rem;

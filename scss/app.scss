@@ -76,49 +76,9 @@ body {
   }
 
   #substrate {
-    width:            300px;
     background:       rgba(0,0,0,.5);
-    margin:           46px auto 0;
     border-radius:    5px;
-    padding:          11px 16px 15px;
     color:            $white;
-  }
-
-  @media only screen and (min-width: 992px) {
-    #substrate {
-      width:          704px;
-      top:            50%;
-      left:           50%;
-      position:       absolute;
-      margin:         -114px 0px 0px -352px;
-      padding:        10px 30px 30px 30px;
-    }
-  }
-
-  @media only screen and (min-width: 769em) and (max-width: 991px) {
-    #substrate {
-      width:          704px;
-      top:            50%;
-      left:           50%;
-      position:       absolute;
-      margin:         -114px 0px 0px -352px;
-      padding:        10px 30px 30px 30px;
-    }
-  }
-
-  @media only screen and (min-width: 481em) and (max-width: 768px) {
-    #substrate {
-      width:          500px;
-      margin-top:     50px;
-      padding:        20px 30px 30px 30px;
-    }
-  }
-
-  @media only screen and (max-width: 480px) {
-    #substrate {
-      width:          450px;
-      padding:        20px 20px 25px 20px;
-    }
   }
 
   a {
@@ -147,6 +107,7 @@ body {
       border-right-width:                 0px;
       background-color:                   $white;
       color:                              $psd-grey;
+      margin-bottom:                      0px;
     }
 
     input {
@@ -158,14 +119,15 @@ body {
       -webkit-border-top-left-radius:     0px;
       border-bottom-left-radius:          0px;
       border-top-left-radius:             0px;
+      margin-bottom:                      0px;
     }
 
     .postfix {
-      height:           50px;
-      padding:          5px 0px 0px 0px;
+      height:                             50px;
+      padding:                            5px 0px 0px 0px;
+      margin-bottom:                      0px;
     }
   }
-
 
 }
 
@@ -183,6 +145,7 @@ body {
 
   h3 {
     margin:           0px;
+    font-size:        14px;
   }
 
   p {
@@ -206,6 +169,7 @@ body {
 
   .block-posts {
     padding-bottom:   14px;
+    float:            left;
   }
 
   .block-posts .th {
@@ -296,3 +260,106 @@ body {
 
 }
 
+// 1021+
+@media #{$xlarge-up} {
+  #substrate {
+    width:          704px;
+    top:            50%;
+    left:           50%;
+    position:       absolute;
+    margin:         -114px 0px 0px -352px;
+    padding:        10px 30px 30px 30px;
+  }
+}
+
+// 1025 - 1200
+@media #{$large-only} {
+  #substrate {
+    width:          704px;
+    top:            50%;
+    left:           50%;
+    position:       absolute;
+    margin:         -114px 0px 0px -352px;
+    padding:        10px 30px 30px 30px;
+  }
+}
+
+// 641 - 1024
+@media #{$medium-only} {
+  #substrate {
+    width:          704px;
+    top:            50%;
+    left:           50%;
+    position:       absolute;
+    margin:         -114px 0px 0px -352px;
+    padding:        10px 30px 30px 30px;
+  }
+
+  .header-bar .right {
+    width:          100%;
+  }
+
+  #footer .sub-item {
+    padding:        0px 10px 0px 10px;
+  }
+}
+
+// 0 - 640
+@media #{$small-only} {
+  #search-form {
+    position:       relative;
+  }
+
+  #substrate {
+    width:          310px;
+    padding:        20px 10px 30px 10px;
+    margin:         10px auto 0px;
+  }
+
+  .header-bar .right {
+    width:          100% !important;
+  }
+
+  #search-form .title {
+    font-size:      30px;
+    font-weight:    300;
+  }
+
+  #footer .sub-item {
+    padding:        0px 10px 0px 10px;
+  }
+}
+
+// 0 - 320
+@media only screen and (max-width: 320px) {
+  #substrate {
+    width:          300px;
+  }
+}
+
+// 0 - 480
+@media only screen and (max-width: 480px) {
+  #news .th img {
+    width:          100px;
+  }
+
+  #news .block-posts-text {
+    padding-left:   115px;
+  }
+
+  #main #social {
+    font-size:      12px;
+  }
+}
+
+// 480 - 640
+@media only screen and (min-width: 480px)  and (max-width: 640px) {
+  #search-form {
+    position:       absolute;
+  }
+
+  #substrate {
+    width:          440px;
+    padding:        20px 20px 20px 20px;
+  }
+}
