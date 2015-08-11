@@ -12,6 +12,7 @@ var gulp        =   require('./node_modules/gulp'),
 	browserSync =   require("browser-sync"),
 	reload      =   browserSync.reload;
 
+
 /**
  *  Js
  */
@@ -28,24 +29,47 @@ gulp.task('js', function () {
 		.pipe(gulp.dest('.'))
 });
 
-/**
- *  Watch
- */
-gulp.task('watch', ['js'], function () {
-	gulp.watch('web/js/** web/*.js', ['js'])
+gulp.task('js:production', function () {
+	gulp.src([
+		'bower_components/jquery/dist/jquery.min.js',
+		'bower_components/foundation/js/foundation.js',
+		'js/app.js'
+	])
+		.pipe(concat('js/main.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('.'))
 });
+
 
 /**
  * Style
  */
 gulp.task('style', function () {
-	gulp.src('scss/app.scss') //Выберем наш main.scss
-		.pipe(sourcemaps.init()) //То же самое что и с js
-		.pipe(sass()) //Скомпилируем
-		.pipe(prefixer()) //Добавим вендорные префиксы
-		.pipe(cssmin()) //Сожмем
+	gulp.src('scss/app.scss')
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.pipe(prefixer())
+		.pipe(cssmin())
 		.pipe(concat('main.min.css'))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('css')) //И в build
+		.pipe(gulp.dest('css'))
 		.pipe(reload({stream: true}));
+});
+
+gulp.task('style:production', function () {
+	gulp.src('scss/app.scss')
+		.pipe(sass())
+		.pipe(prefixer())
+		.pipe(cssmin())
+		.pipe(concat('main.min.css'))
+		.pipe(gulp.dest('css'))
+		.pipe(reload({stream: true}));
+});
+
+
+/**
+ *  Watch
+ */
+gulp.task('watch', ['js'], function () {
+	gulp.watch('web/js/** web/*.js', ['js'])
 });
