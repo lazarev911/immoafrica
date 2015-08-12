@@ -10,6 +10,8 @@
 
 $(document).ready(function() {
 
+	$.Scroller.init('#scroller');
+
 	var images      =   [
 		{id: "img-layer-34", name: "layer-34.jpg", alt: "slide 1"},
 		{id: "img-layer-33", name: "layer-33.jpg", alt: "slide 2"},
@@ -20,8 +22,6 @@ $(document).ready(function() {
 	$(window).on('resize', function() {
 		loadImages(images, '/img');
 	});
-
-	$.Scroller.init('#scroller');
 
 	WebFontConfig = {
 		google: {
