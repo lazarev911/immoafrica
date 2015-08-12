@@ -20,6 +20,7 @@ gulp.task('js', function () {
 	gulp.src([
 		'bower_components/jquery/dist/jquery.min.js',
 		'bower_components/foundation/js/foundation.js',
+		'js/webfont.min.js',
 		'js/scroller.min.js',
 		'js/app.js'
 	])
@@ -34,6 +35,7 @@ gulp.task('js:production', function () {
 	gulp.src([
 		'bower_components/jquery/dist/jquery.min.js',
 		'bower_components/foundation/js/foundation.js',
+		'js/webfont.min.js',
 		'js/scroller.min.js',
 		'js/app.js'
 	])
