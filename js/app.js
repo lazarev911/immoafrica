@@ -23,6 +23,8 @@ $(document).ready(function() {
 		loadImages(images, '/img');
 	});
 
+	$.Scroller.init('#scroller');
+
 	WebFontConfig = {
 		google: {
 			families: ['Roboto:300,400,700:latin']

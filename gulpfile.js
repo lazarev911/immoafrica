@@ -18,10 +18,11 @@ var gulp        =   require('./node_modules/gulp'),
  */
 gulp.task('js', function () {
 	gulp.src([
-				'bower_components/jquery/dist/jquery.min.js',
-				'bower_components/foundation/js/foundation.js',
-				'js/app.js'
-			])
+		'bower_components/jquery/dist/jquery.min.js',
+		'bower_components/foundation/js/foundation.js',
+		'js/scroller.min.js',
+		'js/app.js'
+	])
 		.pipe(sourcemaps.init())
 		.pipe(concat('js/main.min.js'))
 		.pipe(uglify())
@@ -33,6 +34,7 @@ gulp.task('js:production', function () {
 	gulp.src([
 		'bower_components/jquery/dist/jquery.min.js',
 		'bower_components/foundation/js/foundation.js',
+		'js/scroller.min.js',
 		'js/app.js'
 	])
 		.pipe(concat('js/main.min.js'))

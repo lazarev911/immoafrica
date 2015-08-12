@@ -8799,6 +8799,11 @@ body {
     font-size: 1.5rem;
     display: inline-block;
     margin-bottom: 20px; }
+  #main .scroller {
+    height: 300px; }
+  #main .scroller::-webkit-scrollbar {
+    /* Preventing webkit bug of horizontal scrolling */
+    width: 0; }
   #main .block-posts {
     padding-bottom: 14px;
     float: left; }

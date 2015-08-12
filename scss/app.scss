@@ -1,8 +1,9 @@
-@import 'variables';
+@import "variables";
+//@import "../css/scroller.css";
 
-@import '../bower_components/foundation/scss/normalize';
-@import '../bower_components/foundation/scss/foundation';
-@import '../bower_components/fontawesome/scss/font-awesome';
+@import "../bower_components/foundation/scss/normalize";
+@import "../bower_components/foundation/scss/foundation";
+@import "../bower_components/fontawesome/scss/font-awesome";
 
 body {
   background-color:   $white;
@@ -59,7 +60,7 @@ body {
 
   .orbit-prev {
     float:            left;
-    font-size: 200%;
+    font-size:        200%;
   }
 }
 
@@ -164,6 +165,14 @@ body {
     display:          inline-block;
     margin-bottom:    20px;
   }
+
+  .scroller {
+    height:           300px;
+  }
+  .scroller::-webkit-scrollbar { /* Preventing webkit bug of horizontal scrolling */
+    width:      0;
+  }
+
 
   /*    block-posts   */
 
