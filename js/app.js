@@ -10,8 +10,6 @@
 
 $(document).ready(function() {
 
-	$(document).foundation();
-
 	var images      =   [
 		{id: "img-layer-34", name: "layer-34.jpg", alt: "slide 1"},
 		{id: "img-layer-33", name: "layer-33.jpg", alt: "slide 2"},
@@ -34,6 +32,10 @@ $(document).ready(function() {
 			urls: ['//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css']
 		}
 	};
+
+	setTimeout(function() {
+		$(document).foundation();
+	} , 500);
 });
 
 function loadImages(images, dir) {
