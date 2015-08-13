@@ -12,30 +12,20 @@ $(document).ready(function() {
 
 	$.Scroller.init('#scroller');
 
-	var images      =   [
-		{id: "img-layer-34", name: "layer-34.jpg", alt: "slide 1"},
-		{id: "img-layer-33", name: "layer-33.jpg", alt: "slide 2"},
-		{id: "img-layer-31", name: "layer-31.jpg", alt: "slide 3"},
-		{id: "img-ct", name: "ct.jpg", alt: "slide 4"}
-	];
-	loadImages(images, '/img');
-	$(window).on('resize', function() {
-		loadImages(images, '/img');
-	});
-
-	WebFontConfig = {
-		google: {
-			families: ['Roboto:300,400,700:latin']
-		},
-		custom: {
-			families: ['FontAwesome'],
-			urls: ['//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css']
-		}
-	};
-
 	setTimeout(function() {
+		var images      =   [
+			{id: "img-layer-34", name: "layer-34.jpg", alt: "slide 1"},
+			{id: "img-layer-33", name: "layer-33.jpg", alt: "slide 2"},
+			{id: "img-layer-31", name: "layer-31.jpg", alt: "slide 3"},
+			{id: "img-ct", name: "ct.jpg", alt: "slide 4"}
+		];
+		loadImages(images, '/img');
+		$(window).on('resize', function() {
+			loadImages(images, '/img');
+		});
+
 		$(document).foundation();
-	} , 500);
+	} , 0);
 });
 
 function loadImages(images, dir) {
